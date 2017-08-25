@@ -1,18 +1,14 @@
-def is_prime(number):
-    """Return True if *number* is prime."""
-    for element in range(number):
-        if number % element == 0:
-            return False
+class myDict:
+    def __init__(self):
+        self._dict = {}
 
-    return True
+    def add(self, id, val):
+        self._dict[id.lower()] = val
 
-def print_next_prime(number):
-    """Print the closest prime number larger than *number*."""
-    index = number
-    while True:
-        index += 1
-        if is_prime(index):
-            print(index)
+    def return_all(self):
+        return self._dict
 
 
-print_next_prime(number=10)
+md = myDict()
+md.add('ID', 123)
+print(md.return_all())
